@@ -8,8 +8,6 @@ public final class Employee {
     private ExperienceLevel experienceLevel;
     private Shift shift;
 
-
-
     public Employee(String name, int id, Department department, ExperienceLevel experienceLevel, Shift shift) {
         this.name = name;
         this.id = id;
@@ -38,8 +36,24 @@ public final class Employee {
         return this.shift;
     }
 
-    public void SetExperienceLevel(ExperienceLevel newLevel) {
-        this.experienceLevel = newLevel;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
+
+    public void setExperienceLevel(ExperienceLevel experienceLevel) {
+        this.experienceLevel = experienceLevel;
+    }
+
+    public void setShift(Shift shift) {
+        this.shift = shift;
     }
     
      @Override

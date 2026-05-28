@@ -1,6 +1,8 @@
 package com.springfield.powerplant.service;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.swing.ListModel;
 
@@ -61,6 +63,32 @@ public class EmployeeManagementService {
         }
     }
 
+    // public Map<String, Long> getExperienceLevelStatistics() {
+    //     HashMap<String, Long> stats = new HashMap<String, Long>();
+    //     Long novatoCount = 0;
+    //     Long intermedioCount = 0;
+    //     Long expertoCount = 0;
+    //     for (var employee : this.employees) {
+    //         if (employee.getExperienceLevel() == ExperienceLevel.NOVATO) {
+
+    //         }
+            
+    //     }
+    // }
+
+    public boolean isDepartmentFullyCovered(Department targetDepartment) {
+
+        boolean isCovered = false;
+
+        for (var employee : this.employees) {
+            if (employee.getDepartment() == targetDepartment) {
+                isCovered = true;
+            } else {
+                isCovered = false;
+            }
+        }
+        return isCovered;
+    }
 
 
 

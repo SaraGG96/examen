@@ -63,18 +63,32 @@ public class EmployeeManagementService {
         }
     }
 
-    // public Map<String, Long> getExperienceLevelStatistics() {
-    //     HashMap<String, Long> stats = new HashMap<String, Long>();
-    //     Long novatoCount = 0;
-    //     Long intermedioCount = 0;
-    //     Long expertoCount = 0;
-    //     for (var employee : this.employees) {
-    //         if (employee.getExperienceLevel() == ExperienceLevel.NOVATO) {
+    public Map<String, Long> getExperienceLevelStatistics() {
 
-    //         }
-            
-    //     }
-    // }
+        Long novatoCount = 0l;
+        Long intermedioCount = 0l;
+        Long expertoCount = 0l;
+        
+        for (var employee : this.employees) {
+
+
+            if (employee.getExperienceLevel() == ExperienceLevel.NOVATO) {
+                novatoCount += 1;
+            } if (employee.getExperienceLevel() == ExperienceLevel.INTERMEDIO) {
+                intermedioCount += 1;
+            } else {
+                expertoCount += 1;
+            }
+        }
+
+        HashMap<String, Long> stats = new HashMap<String, Long>();
+        stats.put("Novato", novatoCount);
+        stats.put("Intermediario", intermedioCount);
+        stats.put("Experto", expertoCount);
+        return stats;
+
+    }
+
 
     public boolean isDepartmentFullyCovered(Department targetDepartment) {
 

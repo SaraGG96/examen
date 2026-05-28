@@ -58,7 +58,7 @@ public final class Employee {
     
      @Override
      public String toString() {
-        return "ID: " + this.id + "Nivel: " + this.experienceLevel + "Turno: " + this.shift;
+        return "Nombre: " + this.name + "\n" + "ID: " + this.id + "\n" + "Nivel: " + this.experienceLevel + "\n" + "Turno: " + this.shift + "\n";
      }
      
 }

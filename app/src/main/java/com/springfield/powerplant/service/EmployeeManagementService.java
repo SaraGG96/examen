@@ -43,14 +43,22 @@ public class EmployeeManagementService {
         return this.employees.size();
     }
 
-    public List<Employee> findEmployeesByDepartment(Department reactorControl) {
+    public List<Employee> findEmployeesByDepartment(Department targetDepartament) {
         ArrayList<Employee> empleadosReactor = new ArrayList<Employee>();
         for (var employee : this.employees) {
-            if (employee.getDepartment() == reactorControl) {
+            if (employee.getDepartment() == targetDepartament) {
                 empleadosReactor.add(employee);
             }
         }
         return empleadosReactor;
+    }
+
+    public void changeEmployeeExperienceLevel(Employee targetEmployee, ExperienceLevel targetLevel) {
+        for (var employee : this.employees) {
+            if (employee.getName() == targetEmployee.getName()) {
+                employee.setExperienceLevel(targetLevel);
+            }
+        }
     }
 
 

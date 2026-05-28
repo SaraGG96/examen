@@ -3,14 +3,14 @@ package com.springfield.powerplant.model;
 public final class Employee {
 
     private String name;
-    private String id;
+    private int id;
     private Department department;
     private ExperienceLevel experienceLevel;
     private Shift shift;
 
 
 
-    public Employee(String name, String id, Department department, ExperienceLevel experienceLevel, Shift shift) {
+    public Employee(String name, int id, Department department, ExperienceLevel experienceLevel, Shift shift) {
         this.name = name;
         this.id = id;
         this.department = department;
@@ -22,7 +22,7 @@ public final class Employee {
         return this.name;
     }
 
-    public String getId() {
+    public int getId() {
         return this.id;
     }
 

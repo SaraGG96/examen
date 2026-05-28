@@ -11,6 +11,6 @@ Trabajo sobre la organización del personal de la central nuclear de Springfield
 ### Descargar y utilizar el proyecto
 
 ```
-git clone <url> 
+git clone https://github.com/SaraGG96/examen.git
 gradle init
 ```

@@ -4,8 +4,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.swing.ListModel;
-
 import com.springfield.powerplant.model.Department;
 import com.springfield.powerplant.model.Employee;
 import com.springfield.powerplant.model.ExperienceLevel;

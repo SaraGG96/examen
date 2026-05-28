@@ -1,5 +1,9 @@
 package com.springfield.powerplant.service;
 import java.util.ArrayList;
+import java.util.List;
+
+import javax.swing.ListModel;
+
 import com.springfield.powerplant.model.Department;
 import com.springfield.powerplant.model.Employee;
 import com.springfield.powerplant.model.ExperienceLevel;
@@ -37,6 +41,16 @@ public class EmployeeManagementService {
 
     public int crewSize() {
         return this.employees.size();
+    }
+
+    public List<Employee> findEmployeesByDepartment(Department reactorControl) {
+        ArrayList<Employee> empleadosReactor = new ArrayList<Employee>();
+        for (var employee : this.employees) {
+            if (employee.getDepartment() == reactorControl) {
+                empleadosReactor.add(employee);
+            }
+        }
+        return empleadosReactor;
     }
 
 
